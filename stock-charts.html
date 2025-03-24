@@ -3,78 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Six Advanced Stock Charts (TradingView)</title>
+    <title>Six Advanced Stock Charts</title>
     <style>
-        /* Remove default margins and padding, make body fill the viewport */
-        html, body {
-            margin: 0;
-            padding: 0;
-            height: 100vh; /* Full viewport height */
-            width: 100vw; /* Full viewport width */
-            overflow: hidden; /* Prevent scrollbars */
-        }
-
-        /* Grid container fills the entire page */
-        .chart-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
-            grid-template-rows: repeat(2, 1fr); /* 2 equal rows */
-            height: 100%; /* Fill parent height (body) */
-            width: 100%; /* Fill parent width (body) */
-            gap: 0; /* No gaps between charts */
-        }
-
-        /* Each chart fills its grid cell */
-        .chart {
-            width: 100%; /* Full width of grid cell */
-            height: 100%; /* Full height of grid cell */
-            margin: 0;
-            padding: 0;
-        }
+        html, body { margin: 0; padding: 0; height: 100vh; width: 100vw; overflow: hidden; }
+        .chart-container { display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(2, 1fr); height: 100%; width: 100%; gap: 0; }
+        .chart { width: 100%; height: 100%; }
     </style>
 </head>
 <body>
     <div class="chart-container">
-        <!-- TSLA -->
         <div class="chart" id="chart1"></div>
-        <!-- RIVN -->
         <div class="chart" id="chart2"></div>
-        <!-- CHPT -->
         <div class="chart" id="chart3"></div>
-        <!-- ALI=F -->
         <div class="chart" id="chart4"></div>
-        <!-- HG=F -->
         <div class="chart" id="chart5"></div>
-        <!-- BTC-USD -->
         <div class="chart" id="chart6"></div>
     </div>
 
-    <!-- TradingView Script -->
     <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
     <script type="text/javascript">
         new TradingView.widget({
-            "container_id": "chart1",
-            "width": "100%",
-            "height": "100%",
-            "symbol": "NASDAQ:TSLA",
-            "interval": "D",
-            "timezone": "Etc/UTC",
-            "theme": "light",
-            "style": "1",
-            "locale": "en"
+            "container_id": "chart1", "width": "100%", "height": "100%", "symbol": "NASDAQ:TSLA", "interval": "D", "timezone": "Etc/UTC", "theme": "light", "style": "1", "locale": "en"
         });
         new TradingView.widget({
-            "container_id": "chart2",
-            "width": "100%",
-            "height": "100%",
-            "symbol": "NASDAQ:RIVN",
-            "interval": "D",
-            "timezone": "Etc/UTC",
-            "theme": "light",
-            "style": "1",
-            "locale": "en"
+            "container_id": "chart2", "width": "100%", "height": "100%", "symbol": "NASDAQ:RIVN", "interval": "D", "timezone": "Etc/UTC", "theme": "light", "style": "1", "locale": "en"
         });
         new TradingView.widget({
-            "container_id": "chart3",
-            "width": "100%",
-            "
+            "container_id": "chart3", "width": "100%", "height": "100%", "symbol": "NYSE:CHPT", "interval": "D", "timezone": "Etc/UTC", "theme": "light", "style": "1", "locale": "en"
+        });
+        new TradingView.widget({
+            "container_id": "chart4", "width": "100%", "height": "100%", "symbol": "NYMEX:ALI1!", "interval": "D", "timezone": "Etc/UTC", "theme": "light", "style": "1", "locale": "en"
+        });
+        new TradingView.widget({
+            "container_id": "chart5", "width": "100%", "height": "100%", "symbol": "COMEX:HG1!", "interval": "D", "timezone": "Etc/UTC", "theme": "light", "style": "1", "locale": "en"
+        });
+        new TradingView.widget({
+            "container_id": "chart6", "width": "100%", "height": "100%", "symbol": "BITSTAMP:BTCUSD", "interval": "D", "timezone": "Etc/UTC", "theme": "light", "style": "1", "locale": "en"
+        });
+    </script>
+</body>
+</html>
